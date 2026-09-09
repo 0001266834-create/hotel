@@ -5,29 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/estilo.css">
+
+<style>
+.largura{
+
+    text-align: center;
+    border-radius: 90px;
+    border: 9px solid #cccccc;
+
+  width: 400px;
+  height: 300px;
+
+   
+}
+
+.botao
+{ background-color: blue; width: 100px;}
+
+</style>
+
+
 </head>
 
 <body>
 
-    <div style="text-align: center;">
+    <div  class="largura" >
 
         <h1>HotelSystem</h1>
-        <h2>Acesso do Cliente</h2>
+        <h2  style="color: #333333;">Acesso do Cliente</h2 >
         <br>
 
-        <form action="autentificar.php" method="post">
+        <form  action="autentificar.php" method="post" style="border: 100px;>
 
-            <label for="email" >E-mail</label>
-            <input type="email" placeholder="digite seu email">
+            <label for= "email>E-mail</label>
+            <input id="email" name="email" type="email" placeholder="digite seu email">
             <br><br>
             <label for="senha">Senha</label>
-            <input type="password" placeholder="digite sua senha">
+            <input type="password" id="senha" name="senha" placeholder="digite sua senha">
             <br><br>
 
-            <button>enviar</button>
+            <button class="botao">enviar</button>
             <br>
             <a style="color: rgb(14, 255, 1);" href="cadastro_hotel.html">caso erro</a>
 
+            
 
 
 
