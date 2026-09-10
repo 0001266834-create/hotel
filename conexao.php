@@ -6,7 +6,7 @@ $senha = "";
 $banco ="hotel_db";
 
 
-$conexao =mysqli_connect ($host,$usuario,$senha,$banco);
+$conexao = mysqli_connect($host, $usuario, $senha, $banco);
 
 if($conexao){
     echo "conectou ao banco de dados";
