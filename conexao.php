@@ -15,15 +15,4 @@ else{
     echo "nao conectou ao banco de dados";
 }
 
-
-
-
-
-
-
-
-
-
-
-
 ?>
