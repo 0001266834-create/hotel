@@ -1,66 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-z    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de clientes </title>
     <link rel="stylesheet" href="css/estilo.css">
     <style>
     
-    input, select {
-        width: 100%; 
-        padding: 10px; 
-        margin-bottom: 15px; 
-        border: 1px solid #ccc;
-        border-radius: 4px; 
-        font-size: 16px;
-        box-sizing: border-box;
-    }
+    body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9; /* Fundo claro para contrastar com o cartão */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
 
-    input:focus, select:focus {
-        border-color: #4CAF50; 
-        outline: none; 
-    }
-    button, input[type="submit"] {
-        background-color: #4CAF50; 
-        color: white; 
-        padding: 12px 20px; 
-        border: none; 
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 16px; 
-        width: 100%;
-    }
+        /* Cartão Central que organiza todo o conteúdo */
+        .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
 
-    button:hover, input[type="submit"]:hover {
-        background-color: #000100;
-    }
+        /* Título Principal */
+        h1 {
+            color: #4a3e3d; /* Tom escuro elegante */
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Subtítulo */
+        h2 {
+            color: #666;
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        /* Grupos de Formulário (Organiza label + input em blocos) */
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        /* Rótulos dos campos */
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #4a3e3d;
+            font-size: 0.95rem;
+        }
+
+        /* Customização das Caixas de Entrada */
+        input[type="text"], 
+        input[type="email"], 
+        input[type="tel"], 
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dcdcdc;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+        /* Efeito ao clicar no campo */
+        input:focus {
+            border-color: #c5a059; /* Dourado imperial */
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
+            outline: none;
+        }
+
+        /* Botão Enviar */
+        button {
+            background: linear-gradient(135deg, #c5a059, #b38f46); /* Degradê dourado */
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 14px;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.1s;
+            margin-top: 15px;
+            box-shadow: 0 4px 12px rgba(197, 160, 89, 0.3);
+        }
+
+        /* Efeitos de passar o mouse e clicar no botão */
+        button:hover {
+            opacity: 0.9;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        /* Link para a página de Login */
+        .login-link {
+            display: inline-block;
+            margin-top: 25px;
+            color: #8c7e7d;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            border-bottom: 1px solid #dcdcdc;
+            padding-bottom: 2px;
+        }
+
+        .login-link:hover {
+            color: #4a3e3d;
+            border-bottom-color: #4a3e3d;
+        }
 </style>
 
 </head>
-<body class="fundo-pagina" style="text-align: center;">
-    <h1 style="color: rgb(1, 1, 10); ">Imperial Palace</h1> 
+<body>
+
+<div class="container">
+
+    <h1>Imperial Palace</h1> 
     <h2>Cadastro de Cliente</h2>
 
     <form action="salvar_cliente.php" method="POST">
         
-        <label for="nome">Nome Completo:</label><br>
-        <input type="text" id="nome" name="nome" required><br><br>
-          <br><br>
-        <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-        <br> <br>
-        <label for="telefone">Telefone:</label><br>
-        <input type="tel" id="telefone" name="telefone"><br><br>
-         <br><br>
-        <label for="senha">Senha:</label><br>
-        <input type="password" id="senha" name="senha" required><br><br>
-         <br><br>
+             <div class="form-group">
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required>
+         </div>
+
+          <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        </div>
+
+          <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone">
+         </div>
+
+         <div class="form-group">
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+        </div>
+
+
         <button type="submit">Enviar</button>
 
-    </form>
+        </form>
 
-    <br>
+    
 
-    <a href="login.html">login</a>
+    <a href="login.html" class="login-link">Já tem uma conta? Faça login</a>
+
+    </div>
 </body>
 </html>

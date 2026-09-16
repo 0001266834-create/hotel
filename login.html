@@ -8,46 +8,136 @@
     <link rel="stylesheet" href="css/estilo.css">
 
 <style>
-.largura{
+  /* Define uma fonte moderna e um fundo suave para a tela */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    text-align: center;
-    border-radius: 90px;
-    border: 9px solid #cccccc;
+        /* Card de login moderno, branco com sombra suave */
+        .card-login {
+            background-color: #ffffff;
+            text-align: center;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            width: 400px;
+            padding: 40px 30px;
+            box-sizing: border-box;
+        }
 
-  width: 400px;
-  height: 300px;
+        h1 {
+            color: #1a1a1a;
+            font-size: 32px;
+            margin: 0 0 8px 0;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
 
-   
-}
+        h2 {
+            color: #666666;
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0 0 32px 0;
+        }
 
-.botao
-{ background-color: blue; width: 100px;}
+        /* Estrutura organizada para empilhar os campos de forma elegante */
+        .campo-grupo {
+            margin-bottom: 20px;
+            text-align: left;
+        }
 
+        label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #444444;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            font-size: 15px;
+            padding: 12px 14px;
+            width: 100%;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            background-color: #fafafa;
+            transition: all 0.3s ease;
+        }
+
+        /* Efeito de foco quando o usuário clica no campo */
+        input:focus {
+            outline: none;
+            border-color: #0066cc;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+
+        /* Botão moderno azul com cantos arredondados e efeito dinâmico */
+        .botao {
+            background-color: #0066cc;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            padding: 12px 0;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-bottom: 16px;
+            transition: background-color 0.2s ease;
+        }
+
+        .botao:hover {
+            background-color: #0052a3;
+        }
+
+        /* Link discreto e limpo para recuperação/cadastro */
+        .link-erro {
+            color: #666666;
+            font-size: 13px;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .link-erro:hover {
+            color: #ff3333;
+            text-decoration: underline;
+        }
 </style>
-
 
 </head>
 
 <body>
 
-    <div  class="largura" >
+   <div class="card-login">
 
         <h1>HotelSystem</h1>
-        <h2  style="color: #333333;">Acesso do Cliente</h2 >
-        <br>
+         <h2>Acesso do Cliente</h2>
 
-        <form  action="autentificar.php" method="post" style="border: 100px;">
 
+        <form  action="autentificar.php" method="post" >
+
+
+            <div class="campo-grupo">
             <label for= "email">E-mail</label>
             <input id="email" name="email" type="email" placeholder="digite seu email">
-            <br><br>
+            </div>
+
+            <div class="campo-grupo">
             <label for="senha">Senha</label>
             <input type="password" id="senha" name="senha" placeholder="digite sua senha">
-            <br><br>
+            </div>
 
-            <button class="botao">enviar</button>
+            <button type="submit" class="botao">enviar</button>
             <br>
-            <a style="color: rgb(14, 255, 1);" href="cadastro_hotel.html">caso erro</a>
+            <a class="link-erro" href="cadastro_hotel.html">Esqueceu a senha ou precisa de ajuda?</a>
 
             
 
