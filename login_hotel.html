@@ -6,20 +6,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/estilo.css">
+
+<style>
+        /* Configurações básicas para limpar margens e definir a fonte */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Centraliza todo o conteúdo na tela e define um fundo suave */
+        body {
+            background-color: #f4f6f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Título principal do topo */
+        h1 {
+            color: #3a3d45;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        /* Caixa do formulário (Card Branco) */
+        form {
+            background-color: #ffffff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 380px;
+        }
+
+        /* Subtítulo interno */
+        h2 {
+            color: #475569;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Estilo dos textos das etiquetas (Labels) */
+        label {
+            display: block;
+            color: #475569;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+            margin-top: 12px;
+        }
+
+        /* Campos de digitação */
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: #f8fafc;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        /* Efeito visual quando o usuário clica no campo */
+        input:focus {
+            border-color: #3b82f6;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+
+        /* Botão de envio azul */
+        button {
+            width: 100%;
+            background-color:  #c5a059;
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.2s;
+        }
+
+        /* Muda de cor ao passar o mouse no botão */
+        button:hover {
+            background-color:  #c5a059;
+        }
+
+        /* Link de cadastro abaixo do botão */
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+          /* mensagem de baixo do botão */  color: #0d0d0c;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+
 </head>
 
 <body>
     <h1>HotelSystem</h1>
+    <form action="autenticar_hotel.php" method="post">
     <h2>Acesso do Hotel / Parceiro</h2>
 
-    <form action="autenticar_hotel.php" method="post">
-        <label for="E_hotel">E-mail do Hotel </label><br>
-        <input id="E_hotel" name="E_hotel" type="email">
-        <br>
-        <label for="Senha">Senha</label><br>
-        <input id="Senha" name="Senha" type="text">
-        <br><br>
-        <button>Acessar Painel do Hotel </button> <a href="cadastro_hotel.html">clik aqui</a>
+    
+    <label for="email">E-mail do Hotel </label><br>
+    <input id="email" name="email" type="email" required>
+    <br>
+    <label for="senha">Senha</label><br>
+    <input id="senha" name="senha" type="text" required>
+    <br><br>
+    <button>Acessar Painel do Hotel </button> <a href="cadastro_hotel.html">clik aqui</a>
 
     </form>
 

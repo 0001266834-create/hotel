@@ -9,7 +9,7 @@ $banco ="hotel_db";
 $conexao = mysqli_connect($host, $usuario, $senha, $banco);
 
 if($conexao){
-    echo "conectou ao banco de dados";
+    echo "";
 }
 else{
     echo "nao conectou ao banco de dados";
