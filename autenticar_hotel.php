@@ -16,6 +16,6 @@ if(mysqli_num_rows($resultado) > 0) {
 
 }else{
     echo " Seu e-mail ou Senha não existe";
-echo "<a href='login_hotel.html'> fazer login novamente</a>";
+echo "<a href='cadastrar_quarto.html'> fazer login novamente</a>";
 }
 ?>

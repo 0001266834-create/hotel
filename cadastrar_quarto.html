@@ -4,32 +4,184 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
+
+<style>
+        button{
+          background-color: chartreuse;
+          border-radius: 12px;
+        }
+ body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+ .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+  h1.fundo-pagina {
+            color: #9b8181; 
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            background-color: #ffffff;
+        }
+
+ h2 {
+            color: #666;
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+ .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #4a3e3d;
+            font-size: 0.95rem;
+        }
+
+  input[type="text"], input[type="email"], input[type="password"], select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dcdcdc;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+ input[type="text"]:focus, select:focus {
+            border-color: #c5a059; /* Borda dourada suave */
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
+            outline: none;
+        }
+
+
+
+
+
+
+
+
+
+ input[type="number"]:focus, select:focus {
+            border-color: #c5a059; /* Borda dourada suave */
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
+            outline: none;
+        }
+
+input[type="number"], input[type="email"], input[type="password"], select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dcdcdc;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            box-sizing: border-box;
+            background-color: #fff;
+
+}
+
+            
+
+
+
+
+ button {
+            background: linear-gradient(135deg, #20c000, #08e51a); /* Degradê dourado */
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 14px;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.1s;
+            margin-top: 15px;
+            box-shadow: 0 4px 12px rgba(197, 160, 89, 0.3);
+        }
+
+ button:hover {
+            opacity: 0.9;
+        }
+
+  button:active {
+            transform: scale(0.98);
+        }
+
+  .back-link {
+            display: inline-block;
+            margin-top: 25px;
+            color: #8c7e7d;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+            border-bottom: 1px solid #dcdcdc;
+            padding-bottom: 2px;
+        }
+
+   .back-link:hover {
+            color: #4a3e3d;
+            border-bottom-color: #4a3e3d;
+        }
+
+  </style>
+
 </head>
 <body>
-     <form action="cadastrar_quarto.html" method="post">
+     <form action="salvar_quarto.php" method="post">
 
 
                         <label for="id">ID do Hotel</label>
-                        <input type="number" id="id" name="id">
+                        <input type="number" id="id" name="id" >
 
                         <label for="numero">Número do Quarto</label>
                         <input type="text" id="numero" name="numero">
 
-                       <select name="quando" id=""></select>
+                     
 
-                       <label for="estrelas">Classificação  em Estrelas</label>
+
+  <label for="tipo">Tipo de Quarto:</label>
                        
-<select name="estrelas" id="estrelas" > 
+<select name="tipo" id="tipo" > 
   <option value="" disabled selected>Selecione  uma opção</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
+  <option value="solteiro">Solteiro</option>
+  <option value="casal">Casal</option>
+  <option value="suite de luxo">Suíte Luxo</option>
+ 
 </select>
 
-                        <label for="preco">Preço da Diária (R$</label>
-                        <input type="number" step="0.01"  min="0" id="preco" name="preco">
+                        <label for="preco_diaria">Preço da Diária (R$</label>
+                        <input type="number" step="0.01"  min="0" id="preco_diaria" name="preco_diaria ">
 
                         <button>salvar</button> <a href="logout_hotel.php">sair/deslogar</a>
      </form>
