@@ -1,15 +1,18 @@
 <?php
-         require_once "conexao.php";
+require_once "conexao.php";
+
 
 $sql = "SELECT hotel_id, numero, tipo from quartos";
 $resultado = mysqli_query($conexao, $sql);
 
-echo "<tablen border='1'>";
-echo "<tr>"
+echo "<table border='1'>";
 
-<th>hotel_id</th>
+
+
+echo "<tr>
+ <th>hotel_id</th>
  <th>numero</th>
-<th>"tito</th>
+<th>tipo</th>
 
 </tr>";
 
@@ -19,7 +22,6 @@ echo "<tr>";
 echo "<td>" . $linha['hotel_id'] . "</td>";
 echo "<td>" . $linha['numero'] . "</td>";
 echo "<td>" . $linha['tipo'] . "</td>";
-
 echo "</tr>";
 }
 
