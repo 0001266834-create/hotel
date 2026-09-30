@@ -155,6 +155,7 @@ while ($linha = mysqli_fetch_assoc($resultado)){
             transition: background-color 0.2s;
             margin-top: 10px;
         }
+        
 
         button[type="submit"]:hover {
             background-color: #059669;
@@ -208,7 +209,21 @@ while ($linha = mysqli_fetch_assoc($resultado)){
 </div>
 
 <br><br>
-<button type"submit" >comfirmar reservas</button>
+<button  type"submit" style="
+    display: inline-block;
+    background-color: #c5a059;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+">comfirmar reservas</button>
 
 </form>
 <br><br>
