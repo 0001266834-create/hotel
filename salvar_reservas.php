@@ -1,8 +1,8 @@
 <?php
-         require_once "conexao.php";
+require_once "conexao.php";
 
-$id_cliente = $_POST['id_cliente'];
-$id_quarto = $_POST['id_quarto'];
+$id_cliente = $_POST['cliente_id'];
+$id_quarto = $_POST['quarto_id'];
 $data_entrada = $_POST['data_entrada'];
 $data_saida = $_POST['data_saida'];
 
